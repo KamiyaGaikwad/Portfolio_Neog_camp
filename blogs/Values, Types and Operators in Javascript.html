@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleblog.css">
+    <title>Values, Types and Operators in Javascript</title>
+</head>
+<body class="container">
+    <h1>Values, Types and Operators in Javascript</h1>
+    <small>22 August 2021</small>
+    <image id="hero" src="media/hero-blog2.png"></image>
+    <p><strong>"Javascript is not Java"</strong><br/>
+        JavaScript is a scripting language that enables us to create dynamic content, control media objects, and more.</p>
+    <h2>1. Value in Javascript</h2>
+    <p>Computers usually deal with a lot of data, 30 billion bytes just in working memory and even more for hard disk, to handle these Javascript splits them into chunks called values.<br/><br/>
+
+        Javascript uses 64 bits to store a single number value, which means it can represent 2<sup>64</sup> numbers that sum up to more than 18 quintillions. The actual maximum whole number that can be stored is more in the range of 9 quadrillions. Fractional numbers are written in decimal form.<br/><br/>
+        
+        For extraordinarily big or small numbers, we can also use the scientific exponent format represented by e followed by the exponent of the number.<br/><br/>
+        
+        example: <em>3.997e6 = 3.997 x 10<sup>6</sup></em></p>
+    <h2>2. Operators in Javascript</h2>
+    <h3>i) Binary Operators:</h3>
+    <p>Operators that require two values to give a valid result are called binary operators.
+        <ul style="list-style-type: none;">
+
+        <li>/ <span> &nbsp&nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>  Division</li>
+        <li>* <span> &nbsp&nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>    Multiplicataion</li>
+       <li>+  <span> &nbsp&nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>   Addition               </li>
+       <li>-  <span> &nbsp&nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>    Substraction</li>
+       <li>%  <span> &nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>   Modulo </li>
+       <li><  <span> &nbsp&nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>	Less than</li>
+       <li><= <span> &nbsp&nbsp&nbsp&#x21d2;&nbsp </span>	Less than or equal		</li>	
+       <li>>  <span> &nbsp&nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>	Greater than		</li>
+       <li>>= <span> &nbsp&nbsp&nbsp&#x21d2;&nbsp </span>	Greater than or equal</li>
+       <li>== <span> &nbsp&nbsp&nbsp&#x21d2;&nbsp </span>	Equality</li>
+       <li>!= <span> &nbsp&nbsp&nbsp&nbsp&#x21d2;&nbsp </span>	Inequality</li>
+       <li>===<span> &nbsp&#x21d2;&nbsp </span> Strictly equal		</li>
+       <li>!==<span> &nbsp&nbsp&#x21d2;&nbsp </span>	Strictly unequal</li>
+    </ul>
+       
+       <p>★ Modulo is used to find the remainder. <br/>
+        example: x%y gives the remainder after dividing x by y.</p>
+        <p>★ ">" and "<" can be applied to numbers, strings, and non-alphabetic characters. Comparison happens from left to right.</p>
+        
+    </p>
+    <h3>ii) Unary Operators:</h3>
+        <h4>typeof():</h4>
+        <p>Gives the type of value.<br/>
+            example: <br/>
+            <em>typeof(5) -> integer</em><br/>
+            <em>typeof("word") -> string</em></p>
+            
+        <p>★ Minus (-) is both binary and unary operator.<br/>
+            example: <br/>
+            -8: used as a unary operator<br/>
+            8-2: used as a binary operator</p>
+    
+    <h3>iii) Logical Operators:</h3>
+    <p><strong>and, or, not</strong> are logical operators which reason the boolean.</p>
+            <h4>! &#x21d2; Logical NOT</h4>
+            <p>It is a unary operator. It flips the value.<br/>
+                example: <br/>
+                <em>! true -> false</em></p>
+
+            <h4>&& &#x21d2; Logical AND</h4>
+                <p>It is a binary operator. It gives result true only when both values are true.When the value on the left converts to false it returns the left value else it will return the value to the right.<br/></p>
+            <h4>|| &#x21d2; Logical OR</h4>
+                <p>It is a binary operator. It gives the result as true when either of the value is true.This will give the value of left when the left value is true.If the left value is not true, then only it will check the right value and give the result.<br/></p>
+
+    <h3>iv) Conditional Operator:</h3>
+    <p>It is the only ternary operator, i.e. it operates on 3 values.<br/>
+        example: <br/>
+        <em>true?3:4 = 3</em></p>
+
+    <h2>3. Precedence of operators:</h2>
+    <h3>Higher to Lower:</h3>
+    <ul style="list-style-type:none;" class="websites">
+        <li>!</li>
+        <li>typeof</li>
+        <li>/,*,%</li>
+        <li>+,-</li>
+        <li><,<=,>,>=</li>
+        <li>==,!=,===,!==</li>
+        <li>&&</li>
+        <li>||</li>
+        <li>?:</li>
+    </ul>
+    <p>When multiple operators of the same precedence occur next to one another, precedence is decided as per the order of appearance from left to right.<br/>
+        We can also add parenthesis which decides precedence.</p>
+
+    <h2>4. Unicode Standards:</h2>
+    <p>Javascript represents individual characters using the 16 bits format, but Unicode includes twice as many characters, therefore elements like emojis can take up to two character positions.<br/><br/>
+
+        The backtick notation(also called template literals) can be used to embed other values, for example:
+        <em>`twice of 55 is $(55 * 2)`</em><br/><br/>
+        When we write something inside ${}, the result will be calculated and converted into a string and replace the ${} part of the string.
+        the above statement would result in "twice of 55 is 110".</p>
+
+
+    <h2>5. Strings:</h2>
+    <p>We can indicate strings in javascript using single quotes (' '), double quotes (" "), or backticks (` `).<br/><br/>
+
+        <strong>\ - Escaping a character<br/>
+        \n - newline<br/>
+        \t - tab space</strong><br/><br/>
+        
+        We can concatenate two strings by using the "+" operator.<br/>
+        
+        In strings, upper case has lower precedence than lower case.</p>
+
+    
+    <h2>6. Three Special Numbers:</h2>
+    <p><h3>Infinity, - Infinity, and NaN</h3> 
+        ★ Infinity and - Infinity stand for positive and negative infinities respectively.<br/>
+        <strong>NaN:</strong> NaN stands for Not a Number even though it is a value of numeric type. <br/>
+        example: <br/>0/0, infiinity+infinity, or any other numeric operation which doesn't lead to a meaningful result.<br/>
+        ★ This is the only value that is not equal to itself.<br/>
+        </p>
+    
+    <h2>7. Boolean</h2>
+    <p>Boolean has two values, true and false
+        Zero, NaN, and "" (empty string) are false for boolean </p>
+    
+    <h2>8. Short Circuit Evaluation</h2>
+    <p>true || x gives true<br/>
+        false && x gives false</p>
+    
+    <h2>9. Empty Values</h2>
+    <h3>Null and Undefined</h3>
+    <p>These values are used to denote the absence of meaningful value, even though they are themselves values and carry no information. </p>
+    
+    <h2>10. Type Coercion</h2>
+    <p>When operators are used with the wrong type of value, Javascript will convert them to the type it needs by default, however the result of such operations may not be desired or expected, this is called type coercion.<br/>
+
+        However to avoid type coercion we use the operator === and !== to ensure that the value and type are checked.
+         </p>
+    
+    
+    <h2>Summary:</h2>
+    <p>We learned the 4 types of values in Javascript:
+        numbers, strings, booleans, and undefined values
+        We can combine and transform these values with operators. </p>
+                
+    
+    <hr />
+    <footer>
+    <p class="connect">| <a href="https://twitter.com/Kamiya_Gaikwad">twitter</a> | | <a href="https://www.linkedin.com/in/kamiya-gaikwad/">linkedin</a> | | <a href="https://github.com/KamiyaGaikwad">github</a> |</p>
+    <small class="copyright">© 2021, Kamiya Gaikwad</small>
+</footer>
+</body>
+</html>
